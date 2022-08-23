@@ -17,6 +17,19 @@ const login = async (req, res) => {
   }
 };
 
+const createUser = async (req, res) => {
+  const userDatas = req.body;
+
+  try {
+    const newUser = await User.createUser(userDatas);
+
+    return res.status(201).json({ newUser });
+  } catch (err) {
+    console.log(`Erro no Controller || ${err}`);
+  }
+};
+
 module.exports = {
   login,
+  createUser,
 };

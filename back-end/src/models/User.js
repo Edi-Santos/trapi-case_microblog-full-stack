@@ -14,6 +14,21 @@ const login = async (userDatas) => {
   }
 };
 
+const createUser = async (userDatas) => {
+  try {
+    const db = await connection();
+    const newUser = await db.collection(COLLECTION).insertOne(userDatas);
+
+    return {
+      _id: newUser.insertedId,
+      ...userDatas,
+    };
+  } catch (err) {
+    console.log(`Erro no Model || ${err}`);
+  }
+};
+
 module.exports = {
   login,
+  createUser,
 };
