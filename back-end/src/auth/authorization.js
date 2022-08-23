@@ -4,7 +4,7 @@ const secret = 'meuPastelEMaisBarato';
 const jwtConfig = { expiresIn: '1h', algorithm: 'HS256' };
 
 const authorization = (req, res, next) => {
-  const token = req.headers.Authorization;
+  const token = req.headers.authorization;
 
   try {
     if (!token) return res.status(401).json({ message: 'token not found' });
