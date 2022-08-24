@@ -6,6 +6,12 @@ const newPost = async (req, res) => {
   try {
     const post = await Post.newPost(postDatas);
 
+    if (post.message) {
+      const { status, message } = post;
+
+      return res.status(status).json({ message });
+    }
+
     return res.status(201).json({ post });
   } catch (err) {
     console.log(`Erro no Controller || ${err}`);
