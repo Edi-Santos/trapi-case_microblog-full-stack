@@ -9,6 +9,12 @@ const login = async (req, res) => {
   try {
     const user = await User.login(userDatas);
 
+    if (user.message) {
+      const { status, message } = user;
+
+      return res.status(status).json({ message });
+    }
+
     const token = JWT.sign({ data: user }, secret, jwtConfig);
 
     return res.status(200).json({ token });
