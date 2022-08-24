@@ -29,6 +29,12 @@ const createUser = async (req, res) => {
   try {
     const newUser = await User.createUser(userDatas);
 
+    if (newUser.message) {
+      const { status, message } = newUser;
+
+      return res.status(status).json({ message });
+    }
+
     return res.status(201).json({ newUser });
   } catch (err) {
     console.log(`Erro no Controller || ${err}`);

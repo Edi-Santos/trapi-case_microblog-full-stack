@@ -18,7 +18,19 @@ const login = async (userDatas) => {
   }
 };
 
-const createUser = async (userDatas) => User.createUser(userDatas);
+const createUser = async (userDatas) => {
+  try {
+    const validatingDatas = userValidation.datasValidationCreate(userDatas);
+
+    if (validatingDatas !== true) return validatingDatas;
+
+    const toCreateUser = await User.createUser(userDatas);
+    
+    return toCreateUser;
+  } catch (err) {
+    console.log(`Erro no Service || ${err}`);
+  }
+};
 
 module.exports = {
   login,
