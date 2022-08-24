@@ -11,5 +11,6 @@ app.post('/login', User.login);
 app.post('/user', User.createUser);
 
 app.post('/post', authorization, Post.newPost);
+app.get('/post', authorization, Post.getAllPosts);
 
 module.exports = app;

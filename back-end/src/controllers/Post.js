@@ -12,6 +12,17 @@ const newPost = async (req, res) => {
   }
 };
 
+const getAllPosts = async (_req, res) => {
+  try {
+    const posts = await Post.getAllPosts();
+
+    return res.status(200).json({ posts });
+  } catch (err) {
+    console.log(`Erro no Controller || ${err}`);
+  }
+};
+
 module.exports = {
   newPost,
+  getAllPosts,
 };

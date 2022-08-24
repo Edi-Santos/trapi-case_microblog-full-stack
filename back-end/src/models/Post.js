@@ -16,6 +16,18 @@ const newPost = async (postDatas) => {
   }
 };
 
+const getAllPosts = async () => {
+  try {
+    const db = await connection();
+    const posts = await db.collection(COLLECTION).find().toArray();
+
+    return posts;
+  } catch (err) {
+    console.log(`Erro no Model || ${err}`);
+  }
+};
+
 module.exports = {
   newPost,
+  getAllPosts,
 };
