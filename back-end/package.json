@@ -20,7 +20,12 @@
     "mongodb": "^4.9.0"
   },
   "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
     "eslint-config-trybe-backend": "^1.0.4",
-    "nodemon": "^2.0.19"
+    "mocha": "^10.0.0",
+    "mongodb-memory-server": "^8.9.0",
+    "nodemon": "^2.0.19",
+    "sinon": "^14.0.0"
   }
 }
