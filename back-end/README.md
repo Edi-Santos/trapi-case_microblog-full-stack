@@ -143,7 +143,7 @@ Este _endpoint_ é reponsável gerar um token (através do pacote jsonWebToken) 
 
 Imagem ilustrativa:
 
-<img src="./readme_img/get_tasks.png">
+<img src="./readme_img/post_login.png">
 
 #### POST /user
 Este _endpoint_ é responsável por criar um novo usuário.
@@ -162,7 +162,7 @@ Este _endpoint_ é responsável por criar um novo usuário.
 
 Imagem ilustrativa:
 
-<img src="./readme_img/post_tasks.png">
+<img src="./readme_img/post_user.png">
 
 #### POST /post
 Este _endpoint_ é responsável por adicionar novas publicações ao banco de dados.
@@ -177,11 +177,11 @@ Este _endpoint_ é responsável por adicionar novas publicações ao banco de da
 }
 ```
 
-- _Outputs_: este _endpoint_ retorna um objeto contendo o objeto "__post__" com as informações da publicação que acabou de ser feita.
+- _Outputs_: este _endpoint_ retorna um objeto contendo o objeto "__post__" com as informações da publicação que acabou de ser feita mais o seu __id_.
 
 Imagem ilustrativa:
 
-<img src="./readme_img/post_tasks.png">
+<img src="./readme_img/post_post.png">
 
 #### GET /post
 Este _endpoint_ é responsável por ler todas as publicações já existentes no banco de dados.
@@ -194,7 +194,7 @@ Este _endpoint_ é responsável por ler todas as publicações já existentes no
 
 Imagem ilustrativa:
 
-<img src="./readme_img/post_tasks.png">
+<img src="./readme_img/get_posts.png">
 
 ---
 
