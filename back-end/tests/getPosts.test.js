@@ -12,7 +12,7 @@ chai.use(chaiHTTP);
 const { expect } = chai;
 
 describe('GET /post', () => {
-  describe.only('Testa quando a requisição é bem sucedida', () => {
+  describe('Testa quando a requisição é bem sucedida', () => {
     let response = {};
     let DBServer;
     
