@@ -12,7 +12,7 @@ chai.use(chaiHTTP);
 const { expect } = chai;
 
 describe('POST /login', () => {
-  describe('Testa quando a requisição é bem sucedida', async () => {
+  describe('Testa quando a requisição é bem sucedida', () => {
     let response = {};
     let DBServer;
     
@@ -56,7 +56,7 @@ describe('POST /login', () => {
       expect(response.body).to.be.a('object');
     });
 
-    it('o objeto possui a propriedade "newTasks"', () => {
+    it('o objeto possui a propriedade "token"', () => {
       expect(response.body).to.have.property('token');
     });
   });
@@ -88,7 +88,7 @@ describe('POST /login', () => {
       await DBServer.stop();
     })
 
-    it('retorna o código de status 400', () => {
+    it('retorna o código de status 404', () => {
       expect(response).to.have.status(404);
     });
 
