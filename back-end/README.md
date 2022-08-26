@@ -73,7 +73,7 @@ Com o ambiente preparado, agora é preciso que você clone o projeto para sua m�
 2. Em seguida, copie o link do repositório.
 3. Depois, abra o seu terminal, navegue até a pasta que deseja colocar o projeto e use o comando: 
 ```
-git clone git@github.com:Edi-Santos/trapi-case_microblog_full-stack.git
+git clone git@github.com:Edi-Santos/trapi-case_microblog-full-stack.git
 ```
 
 #### Instalando Dependências
