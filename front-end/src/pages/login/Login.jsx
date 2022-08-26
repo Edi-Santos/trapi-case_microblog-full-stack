@@ -36,9 +36,12 @@ function Login() {
     if (requestLogin.message) return alert(requestLogin.message);
 
     if (requestLogin.token) {
-      const { token } = requestLogin;
+      const { token, user } = requestLogin;
+      const { name, email } = user;
 
       localStorage.setItem('token', token);
+      localStorage.setItem('userName', name);
+      localStorage.setItem('userEmail', email);
       return navigate('/feed');
     }
   };
