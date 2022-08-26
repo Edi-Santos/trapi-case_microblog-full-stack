@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import FormLogin from '../components/login/FormLogin';
-import ButtonLogin from '../components/login/ButtonLogin';
+import FormLogin from '../../components/login/FormLogin';
+import ButtonLogin from '../../components/login/ButtonLogin';
 
-import request from '../services/fetchAPI';
+import request from '../../services/fetchAPI';
 
 function Login() {
   const [login, setLogin] = useState({
