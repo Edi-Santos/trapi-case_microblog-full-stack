@@ -13,10 +13,10 @@
 3. [Como Rodar os Testes em sua Máquina](#como-rodar-os-testes-em-sua-máquina)
    - [Rodando os Testes](#rodando-os-testes)
 4. [Endpoints do Projeto](#endpoints-do-projeto)
-   - [GET /tasks](#get-tasks)
-   - [POST /tasks](#post-tasks)
-   - [PUT /tasks/:id](#put-tasksid)
-   - [DELETE /tasks/:id](#delete-tasksid)
+   - [POST /login](#post-login)
+   - [POST /user](#post-user)
+   - [POST /post](#post-post)
+   - [GET /post](#get-post)
 5. [Considerações Finais](#considerações-finais)
 
 ---
