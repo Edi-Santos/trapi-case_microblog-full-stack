@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import InputPost from '../../components/feed/InputPost';
 import PostsList from '../../components/feed/PostsList';
 import MyContext from '../../contextAPI/MyContext';
 
@@ -26,6 +27,7 @@ function Feed() {
 
   return (
     <main>
+      <InputPost />
       <PostsList />
     </main>
   );
