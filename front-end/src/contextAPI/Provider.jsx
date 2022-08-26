@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import MyContext from './MyContext';
 
 function Provider({ children }) {
-  const [posts, setPosts] = useState([]);
+  const [allPosts, setAllPosts] = useState({});
 
   const token = localStorage.getItem('token');
 
   const contextValue = {
-    posts,
-    setPosts,
+    allPosts,
+    setAllPosts,
     token,
   };
 
