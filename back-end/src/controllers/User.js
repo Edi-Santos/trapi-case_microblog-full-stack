@@ -17,7 +17,7 @@ const login = async (req, res) => {
 
     const token = JWT.sign({ data: user }, secret, jwtConfig);
 
-    return res.status(200).json({ token });
+    return res.status(200).json({ token, user });
   } catch (err) {
     console.log(`Erro no Controller || ${err}`);
   }
